@@ -1,0 +1,31 @@
+
+html {
+   box-sizing: border-box;
+   font-size: 62.5%;
+}
+
+*,
+*:after,
+*:before {
+   box-sizing: inherit;
+} 
+
+body {
+   font-family: $fontBody;
+   font-weight: 400;
+}
+
+ul {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+}
+
+img {
+   display: block;
+   width: 100%;
+}
