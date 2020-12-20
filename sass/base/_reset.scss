@@ -4,14 +4,12 @@ html {
    -webkit-text-size-adjust: 100%;
    box-sizing: border-box;
    scroll-behavior: smooth;
+   font-size: 62.5%;
+   overflow-x: hidden;
 }
 
 *, *:after, *:before {
    box-sizing: inherit;
-}
-
-body {
-   margin: 0;
 }
 
 main {

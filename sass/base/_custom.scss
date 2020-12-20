@@ -1,18 +1,8 @@
 
-html {
-   box-sizing: border-box;
-   font-size: 62.5%;
-}
-
-*,
-*:after,
-*:before {
-   box-sizing: inherit;
-} 
-
 body {
    font-family: $fontBody;
    font-weight: 400;
+   margin: 0;  
 }
 
 ul {
@@ -28,6 +18,17 @@ a {
 img {
    display: block;
    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+   font-family: $fontHeading;
+   margin-top: 0;
+   margin-bottom: 0;
+   font-weight: 400;
 }
 
 .container {

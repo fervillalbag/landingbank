@@ -1,8 +1,10 @@
 
 .navigation {
-   height: 7rem;
    background-color: $VeryLightGray;
-   z-index: 1;
+   position: sticky;
+   top: 0;
+   height: 7rem;
+   z-index: 20;
    
    .container {
       display: flex;
@@ -27,14 +29,14 @@
       background-color: $VeryDarkViolet;
       padding-top: 5rem;
 
-      position: absolute;
+      position: fixed;
       top: 7rem;
       left: 0;
       width: 100%;
       height: calc(100vh - 7rem);
       transition: all 600ms ease;
-      transform: translateY(-1000px);
-      z-index: -1;
+      transform: translateY(2000px);
+      z-index: 10;
 
       &.active {
          transform: translateY(0);

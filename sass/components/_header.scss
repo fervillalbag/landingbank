@@ -1,0 +1,82 @@
+
+.header {
+   position: relative;
+   background-color: $DarkViolet;
+   z-index: 10;
+   
+   &__info {
+      text-align: center;
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+
+      &:before {
+         content: '';
+         display: block;
+         background-image: url('/bg-pattern-intro-left-mobile.svg');
+         background-repeat: no-repeat;
+         background-size: cover;
+         position: absolute;
+         top: 45rem;
+         left: 0;
+         width: 16.8rem;
+         height: 16.5rem;
+         z-index: -1;
+      }
+
+      &:after {
+         content: '';
+         display: block;
+         background-image: url('/bg-pattern-intro-right-mobile.svg');
+         background-repeat: no-repeat;
+         background-size: cover;
+         position: absolute;
+         bottom: -24rem;
+         right: 0;
+         width: 12.4rem;
+         height: 33.3rem;
+         z-index: -1;
+      }
+   }
+
+   &__title {
+      font-family: $fontHeading;
+      color: $VeryLightGray;
+      font-size: 4.6rem;
+      font-weight: 400;
+   }
+
+   &__description {
+      font-size: 1.4rem;
+      line-height: 1.6;
+      color: $VeryLightGray;
+      margin-top: 2rem;
+   }
+   
+   &__media {
+      height: 45rem;
+   }
+
+   &__image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: inherit;
+      object-fit: cover;
+   }
+
+   &__action {
+      display: flex;
+      justify-content: center;
+      margin-top: 3rem;
+   }
+
+   &__link {
+      display: block;
+      border: 1px solid $VeryLightGray;
+      padding: 1rem 2rem;
+      font-size: 1.6rem;
+      color: $VeryLightGray;
+      text-transform: uppercase;
+      font-weight: 700;
+   }
+}
