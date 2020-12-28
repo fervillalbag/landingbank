@@ -1,0 +1,51 @@
+
+.footer {
+   background-color: $VeryLightGray;
+   margin-top: 16rem;
+
+   &-header {
+      display: grid;
+      justify-items: center;
+      padding-top: 10rem;
+      padding-bottom: 5rem;
+      position: relative;
+
+      &:before {
+         content: '';
+         display: block;
+         background-image: url('/bg-pattern-footer-mobile.svg');
+         width: 37.4rem;
+         height: 17.3rem;
+         position: absolute;
+         top: 0;
+         z-index: 1;
+      }
+
+      &__link {
+         z-index: 10;
+      }
+
+      &__image {
+         width: 16rem;
+         margin-bottom: 3rem;
+      }
+   }
+
+   &-social {
+      display: flex;
+      align-items: center;
+      z-index: 10;
+
+      &__link {
+         margin-right: 2rem;
+
+         &:last-of-type {
+            margin-right: 0;
+         }
+      }
+
+      &__icon {
+         width: 2.5rem;
+      }
+   }
+}

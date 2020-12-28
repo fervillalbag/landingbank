@@ -1,6 +1,7 @@
 
 import Head from 'next/head'
 import AboutUs from '../components/AboutUs'
+import Footer from '../components/Footer'
 import Header from '../components/Header'
 import Navbar from '../components/Navbar'
 import Services from '../components/Services'
@@ -19,6 +20,7 @@ export default function Home() {
          <Header />
          <Services />
          <AboutUs />
+         <Footer />
       </>
    )
 }
