@@ -71,12 +71,6 @@
    }
 
    &__link {
-      display: block;
-      border: 1px solid $VeryLightGray;
-      padding: 1rem 2rem;
-      font-size: 1.6rem;
-      color: $VeryLightGray;
-      text-transform: uppercase;
-      font-weight: 700;
+      @include button(display-block);
    }
 }

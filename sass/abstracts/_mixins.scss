@@ -4,3 +4,14 @@
       @content;
    }
 }
+
+@mixin button($display) {
+   display: $display;
+   border: 1px solid $VeryLightGray;
+   padding: 1rem 2rem;
+   font-size: 1.6rem;
+   color: $VeryLightGray;
+   text-transform: uppercase;
+   font-weight: 700;
+   background-color: transparent;
+}
