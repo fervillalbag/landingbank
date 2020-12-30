@@ -10,6 +10,10 @@
       color: $VeryDarkViolet;
       position: relative;
 
+      @include responsive(768px) {
+         text-align: left;
+      }
+
       &:before {
          content: '';
          display: block;
@@ -20,6 +24,20 @@
          top: -3rem;
          left: 50%;
          transform: translateX(-50%);
+
+         @include responsive(768px) {
+            left: 0;
+            transform: translateX(0);
+         }
+      }
+   }
+
+   &__main {
+      display: grid;
+
+      @include responsive(768px) {
+         grid-template-columns: repeat(3, 1fr);
+         grid-column-gap: 4rem;
       }
    }
 
@@ -27,6 +45,11 @@
       display: grid;
       justify-items: center;
       margin-bottom: 4rem;
+
+      @include responsive(768px) {
+         justify-items: start;
+         margin-bottom: 0;
+      }
 
       &:last-child {
          margin-bottom: 0;
@@ -50,5 +73,10 @@
       text-align: center;
       color: $DarkGrayishViolet;
       line-height: 1.6;
+
+      @include responsive(768px) {
+         text-align: left;
+         margin-top: 0;
+      }
    }
 }

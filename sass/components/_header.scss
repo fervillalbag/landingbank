@@ -43,8 +43,10 @@
 
          @include responsive(768px) {
             background-image: url('/bg-pattern-intro-left-desktop.svg');
-            width: 19.5rem;
+            width: 17rem;
+            background-size: contain;
             height: 50rem;
+            top: 35rem;
          }
       }
 
