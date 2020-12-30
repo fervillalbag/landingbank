@@ -10,22 +10,22 @@ export default function FooterHeader() {
             </a>
          </Link>
          <div className="footer-social">
-            <Link href="#">
+            <Link href="/">
                <a className="footer-social__link">
                   <img className="footer-social__icon" src="/icon-facebook.svg" alt="" />
                </a>
             </Link>
-            <Link href="#">
+            <Link href="/">
                <a className="footer-social__link">
                   <img className="footer-social__icon" src="/icon-twitter.svg" alt="" />
                </a>
             </Link>
-            <Link href="#">
+            <Link href="/">
                <a className="footer-social__link">
                   <img className="footer-social__icon" src="/icon-instagram.svg" alt="" />
                </a>
             </Link>
-            <Link href="#">
+            <Link href="/">
                <a className="footer-social__link">
                   <img className="footer-social__icon" src="/icon-pinterest.svg" alt="" />
                </a>

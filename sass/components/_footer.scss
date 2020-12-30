@@ -9,6 +9,8 @@
       padding-top: 10rem;
       padding-bottom: 5rem;
       position: relative;
+      border-bottom: 1px solid $GrayishBlue;
+      margin-bottom: 3rem;
 
       &:before {
          content: '';

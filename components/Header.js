@@ -6,7 +6,12 @@ export default function Header() {
       <header className="header">
          <div className="container">
             <div className="header__media">
-               <img className="header__image" src="/image-intro-mobile.jpg" alt="" />
+               <img
+                  className="header__image"
+                  srcSet="/image-intro-mobile.jpg 320w,
+                          /image-intro-desktop.jpg 576w"
+                  alt=""
+               />
             </div>
             <div className="header__info">
                <h2 className="header__title">Humanizing your insurance.</h2>

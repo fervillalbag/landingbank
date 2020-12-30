@@ -3,11 +3,30 @@
    position: relative;
    background-color: $DarkViolet;
    z-index: 10;
+
+   @include responsive(768px) {
+      height: 48rem;
+      margin-bottom: 16rem;
+   }
+
+   .container {
+      display: grid;
+      
+      @include responsive(768px) {
+         grid-template-columns: repeat(2, 1fr);
+         grid-column-gap: 3rem;
+      }
+   }
    
    &__info {
       text-align: center;
       padding-top: 6rem;
       padding-bottom: 6rem;
+
+      @include responsive(768px) {
+         order: -1;
+         text-align: left;
+      }
 
       &:before {
          content: '';
@@ -21,6 +40,12 @@
          width: 16.8rem;
          height: 16.5rem;
          z-index: -1;
+
+         @include responsive(768px) {
+            background-image: url('/bg-pattern-intro-left-desktop.svg');
+            width: 19.5rem;
+            height: 50rem;
+         }
       }
 
       &:after {
@@ -35,6 +60,14 @@
          width: 12.4rem;
          height: 33.3rem;
          z-index: -1;
+
+         @include responsive(768px) {
+            background-image: url('/bg-pattern-intro-right-desktop.svg');
+            top: -5rem;
+            width: 35rem;
+            height: 50rem;
+            z-index: 1;
+         }
       }
    }
 
@@ -43,6 +76,10 @@
       color: $VeryLightGray;
       font-size: 4.6rem;
       font-weight: 400;
+
+      @include responsive(768px) {
+         font-size: 6rem;
+      }
    }
 
    &__description {
@@ -50,10 +87,18 @@
       line-height: 1.6;
       color: $VeryLightGray;
       margin-top: 2rem;
+
+      @include responsive(768px) {
+         font-size: 1.6rem;
+      }
    }
    
    &__media {
       height: 45rem;
+
+      @include responsive(768px) {
+         height: 100%;
+      }
    }
 
    &__image {
@@ -62,12 +107,23 @@
       left: 0;
       height: inherit;
       object-fit: cover;
+
+      @include responsive(768px) {
+         position: initial;
+         margin-top: 3rem;
+         object-fit: contain;
+         height: 55rem;
+      }
    }
 
    &__action {
       display: flex;
       justify-content: center;
       margin-top: 3rem;
+
+      @include responsive(768px) {
+         justify-content: flex-start;
+      }
    }
 
    &__link {
