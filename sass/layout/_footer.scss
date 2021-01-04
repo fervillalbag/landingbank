@@ -2,15 +2,14 @@
 .footer {
    background-color: $VeryLightGray;
    margin-top: 16rem;
+   position: relative;
 
    &-header {
       display: grid;
       justify-items: center;
       padding-top: 10rem;
       padding-bottom: 5rem;
-      position: relative;
       border-bottom: 1px solid $GrayishBlue;
-      margin-bottom: 3rem;
 
       @include responsive(768px) {
          grid-template-columns: repeat(2, 1fr);
@@ -26,7 +25,16 @@
          height: 17.3rem;
          position: absolute;
          top: 0;
+         left: 0;
          z-index: 1;
+
+         @include responsive(768px) {
+            background-image: url('/bg-pattern-footer-desktop.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 52.8rem;
+            height: 23.1rem;
+         }
       }
 
       &__link {
@@ -58,6 +66,51 @@
 
       &__icon {
          width: 2.5rem;
+      }
+   }
+
+   &-main {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      display: grid;
+      
+      @include responsive(768px) {
+         grid-template-columns: repeat(4, 1fr);
+         padding-top: 6rem;
+         padding-bottom: 6rem;
+      }
+
+      &__item {
+         margin-bottom: 5rem;
+
+         @include responsive(768px) {
+            margin-bottom: 0;
+         }
+      }
+
+      &__title,
+      &__link {
+         font-size: 1.7rem;
+         font-family: $fontBody;
+         font-weight: 700;
+         text-transform: uppercase;
+         text-align: center;
+
+         @include responsive(768px) {
+            text-align: left;
+            font-size: 1.5rem;
+         }
+      }
+
+      &__title {
+         margin-bottom: 3rem;
+         color: $DarkGrayishViolet;
+      }
+
+      &__link {
+         display: block;
+         margin-bottom: 2rem;
+         color: $VeryDarkViolet;
       }
    }
 }
