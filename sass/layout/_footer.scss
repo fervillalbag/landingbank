@@ -43,7 +43,10 @@
       display: flex;
       align-items: center;
       z-index: 10;
-      justify-self: end;
+
+      @include responsive(768px) {
+         justify-self: end;
+      }
 
       &__link {
          margin-right: 2rem;

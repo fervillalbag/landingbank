@@ -27,7 +27,7 @@ export default function Menu({ barActive }) {
          </li>
          <li className="navigation-menu__item">
             <Link href="/">
-               <a className="navigation-menu__link">
+               <a className="navigation-menu__link navigation-menu__link--plans">
                   View plans
                </a>
             </Link>
