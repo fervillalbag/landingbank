@@ -6,6 +6,15 @@ import Header from '../components/Header'
 import Navbar from '../components/Navbar'
 import Services from '../components/Services'
 
+/*
+   background-image: url('/bg-pattern-how-we-work-desktop.svg');
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center right;
+   width: 100%;
+   height: 100%;
+*/
+
 export default function Home() {
    return (
       <>
