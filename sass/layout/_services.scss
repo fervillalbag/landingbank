@@ -66,6 +66,10 @@
       margin-bottom: 0.75rem;
       color: $VeryDarkViolet;
       text-transform: capitalize;
+
+      @include responsive(768px) {
+         margin-bottom: 1rem;
+      }
    }
 
    &__description {

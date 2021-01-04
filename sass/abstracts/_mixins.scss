@@ -16,4 +16,10 @@
    background-color: transparent;
    cursor: pointer;
    outline: none;
+   transition: all 400ms ease;
+
+   &:hover {
+      background-color: $VeryLightGray;
+      color: $DarkViolet;
+   }
 }
