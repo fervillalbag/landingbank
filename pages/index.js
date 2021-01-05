@@ -1,10 +1,10 @@
 
 import Head from 'next/head'
-import AboutUs from '../components/AboutUs'
-import Footer from '../components/Footer'
-import Header from '../components/Header'
-import Navbar from '../components/Navbar'
-import Services from '../components/Services'
+import AboutUs from '../layout/AboutUs'
+import Footer from '../layout/Footer'
+import Header from '../layout/Header'
+import Navbar from '../layout/Navbar'
+import Services from '../layout/Services'
 
 /*
    background-image: url('/bg-pattern-how-we-work-desktop.svg');

@@ -13,7 +13,6 @@
       height: 100%;
    }
 
-   /* Logo */
    &-brand {
 
       &__image {
@@ -25,7 +24,6 @@
       }
    }
 
-   /* Menu */
    &-menu {
       display: flex;
       flex-direction: column;
@@ -123,7 +121,6 @@
       }
    }
 
-   /* Bars Button */
    &-bars {
 
       @include responsive(768px) {
