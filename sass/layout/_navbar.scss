@@ -17,7 +17,11 @@
    &-brand {
 
       &__image {
-         width: 15rem;
+         width: 10rem;
+
+         @include responsive(768px) {
+            width: 15rem;
+         }
       }
    }
 
