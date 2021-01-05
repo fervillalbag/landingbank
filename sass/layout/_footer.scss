@@ -6,6 +6,7 @@
 
    &-header {
       display: grid;
+      align-items: center;
       justify-items: center;
       padding-top: 10rem;
       padding-bottom: 5rem;
@@ -14,8 +15,9 @@
 
       @include responsive(768px) {
          grid-template-columns: repeat(2, 1fr);
-         align-items: center;
          justify-items: start;
+         padding-top: 8rem;
+         padding-bottom: 4rem;
       }
 
       &:before {
@@ -45,6 +47,10 @@
       &__image {
          width: 16rem;
          margin-bottom: 3rem;
+
+         @include responsive(768px) {
+            margin-bottom: 0;
+         }
       }
    }
 
