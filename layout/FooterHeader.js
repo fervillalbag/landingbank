@@ -6,28 +6,28 @@ export default function FooterHeader() {
       <header className="footer-header">
          <Link href="/">
             <a className="footer-header__link">
-               <img className="footer-header__image" src="/logo.svg" alt="" />
+               <img className="footer-header__image" src="/logo.svg" alt="Logo de la empresa" />
             </a>
          </Link>
          <div className="footer-social">
             <Link href="/">
                <a className="footer-social__link">
-                  <img className="footer-social__icon" src="/icon-facebook.svg" alt="" />
+                  <img className="footer-social__icon" src="/icon-facebook.svg" alt="Logo de Facebook" />
                </a>
             </Link>
             <Link href="/">
                <a className="footer-social__link">
-                  <img className="footer-social__icon" src="/icon-twitter.svg" alt="" />
+                  <img className="footer-social__icon" src="/icon-twitter.svg" alt="Logo de Twitter" />
                </a>
             </Link>
             <Link href="/">
                <a className="footer-social__link">
-                  <img className="footer-social__icon" src="/icon-instagram.svg" alt="" />
+                  <img className="footer-social__icon" src="/icon-instagram.svg" alt="Logo de Instagram" />
                </a>
             </Link>
             <Link href="/">
                <a className="footer-social__link">
-                  <img className="footer-social__icon" src="/icon-pinterest.svg" alt="" />
+                  <img className="footer-social__icon" src="/icon-pinterest.svg" alt="Logo de Pinterest" />
                </a>
             </Link>
          </div>
