@@ -1,7 +1,29 @@
 
 import { useState } from 'react'
-import Link from 'next/link'
 import Menu from './Menu'
+import styled from '@emotion/styled'
+import { colors } from '../utils/variables'
+import NavbarBrand from './NavbarBrand'
+import NavbarBars from './NavbarBars'
+
+const Navigation = styled.nav`
+   background-color: ${colors.VeryLightGray};
+   position: sticky;
+   top: 0;
+   height: 7rem;
+   z-index: 20;
+`
+
+const Container = styled.div`
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   height: 100%;
+   max-width: 1170px;
+   width: 92vw;
+   margin-right: auto;
+   margin-left: auto;
+`
 
 export default function Navbar() {
 
@@ -10,25 +32,12 @@ export default function Navbar() {
    const onToggleMenu = () => setBarActive(!barActive)
 
    return (
-      <nav className="navigation">
-         <div className="container">
-            <div className="navigation-brand">
-               <Link href="/">
-                  <a className="navigation-brand__link">
-                     <img src="/logo.svg" alt="Logo" className="navigation-brand__image" />
-                  </a>
-               </Link>
-            </div>
-            <div className="navigation-bars">
-               <button
-                  className="navigation-bars__button"
-                  onClick={onToggleMenu}
-               >
-                  <i className="fas fa-bars"></i>
-               </button>
-            </div>
+      <Navigation>
+         <Container>
+            <NavbarBrand />
+            <NavbarBars onToggleMenu={onToggleMenu} />
             <Menu barActive={barActive} />
-         </div>
-      </nav>
+         </Container>
+      </Navigation>
    )
 }
