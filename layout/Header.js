@@ -1,28 +1,37 @@
 
-import Link from 'next/link'
+import HeaderInfo from './HeaderInfo'
+import HeaderMedia from './HeaderMedia'
+import styled from '@emotion/styled'
+import { colors } from '../utils/variables'
+
+const HeaderContainer = styled.header`
+   position: relative;
+   background-color: ${colors.DarkViolet};
+   z-index: 10;
+
+   @media screen and (min-width: 768px) {
+      height: 48rem;
+      margin-bottom: 16rem;
+   }
+`
+
+const HeaderWrapper = styled.div`
+   display: grid;
+      
+   @media screen and (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 3rem;
+   }
+`
 
 export default function Header() {
    return (
-      <header className="header">
-         <div className="container">
-            <div className="header__media">
-               <img
-                  className="header__image"
-                  srcSet="/image-intro-mobile.jpg 320w,
-                          /image-intro-desktop.jpg 576w"
-                  alt=""
-               />
-            </div>
-            <div className="header__info">
-               <h2 className="header__title">Humanizing your insurance.</h2>
-               <p className="header__description">Get your life insurance coverage easier and faster. We blend our expertise and technology to help you find the plan that's right for your. Ensure you and your loved ones are protected.</p>
-               <footer className="header__action">
-                  <Link href="/">
-                     <a className="header__link">View plans</a>
-                  </Link>
-               </footer>
-            </div>
-         </div>
-      </header>
+      <HeaderContainer>
+         <HeaderWrapper
+            className="container">
+            <HeaderMedia />
+            <HeaderInfo />
+         </HeaderWrapper>
+      </HeaderContainer>
    )
 }

@@ -92,7 +92,7 @@ export default function Menu({ barActive }) {
          className={!barActive && 'navigation-menu active'}
       >
          {navLinks.map(navLink => (
-            <NavItemList navLink={navLink} />
+            <NavItemList key={navLink} navLink={navLink} />
          ))}
          <NavItem>
             <Link href="/">

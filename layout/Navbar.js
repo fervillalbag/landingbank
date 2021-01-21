@@ -14,15 +14,11 @@ const Navigation = styled.nav`
    z-index: 20;
 `
 
-const Container = styled.div`
+const NavWrapper = styled.div`
    display: flex;
    align-items: center;
    justify-content: space-between;
    height: 100%;
-   max-width: 1170px;
-   width: 92vw;
-   margin-right: auto;
-   margin-left: auto;
 `
 
 export default function Navbar() {
@@ -33,11 +29,13 @@ export default function Navbar() {
 
    return (
       <Navigation>
-         <Container>
+         <NavWrapper
+            className="container">
             <NavbarBrand />
-            <NavbarBars onToggleMenu={onToggleMenu} />
+            <NavbarBars
+               onToggleMenu={onToggleMenu} />
             <Menu barActive={barActive} />
-         </Container>
+         </NavWrapper>
       </Navigation>
    )
 }
