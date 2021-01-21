@@ -1,7 +1,8 @@
 
 import Link from 'next/link'
 import styled from '@emotion/styled'
-import { colors } from '../utils/variables'
+import { colors, navLinks } from '../utils/variables'
+import NavItemList from './NavItemList'
 
 const MenuContainer = styled.ul`
    display: flex;
@@ -51,7 +52,7 @@ const MenuContainer = styled.ul`
    }
 `
 
-const NavItem = styled.li`
+export const NavItem = styled.li`
    margin-bottom: 3rem;
 
    @media screen and (min-width: 768px) {
@@ -60,26 +61,6 @@ const NavItem = styled.li`
 
       &:last-of-type {
          margin-right: 0;
-      }
-   }
-`
-
-const NavLink = styled.a`
-   color: $VeryLightGray;
-   font-size: 2rem;
-   text-transform: uppercase;
-   cursor: pointer;
-
-   @media screen and (min-width: 768px) {
-      color: ${colors.DarkViolet};
-      display: block;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: $DarkGrayishViolet;
-      transition: color 300ms ease;
-
-      &:hover {
-         color: ${colors.DarkGrayishViolet};
       }
    }
 `
@@ -110,27 +91,9 @@ export default function Menu({ barActive }) {
       <MenuContainer
          className={!barActive && 'navigation-menu active'}
       >
-         <NavItem>
-            <Link href="/">
-               <NavLink>
-                  How we work
-               </NavLink>
-            </Link>
-         </NavItem>
-         <NavItem>
-            <Link href="/">
-               <NavLink>
-                  Blog
-               </NavLink>
-            </Link>
-         </NavItem>
-         <NavItem>
-            <Link href="/">
-               <NavLink>
-                  Account
-               </NavLink>
-            </Link>
-         </NavItem>
+         {navLinks.map(navLink => (
+            <NavItemList navLink={navLink} />
+         ))}
          <NavItem>
             <Link href="/">
                <NavLinkPlans>

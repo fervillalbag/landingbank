@@ -6,3 +6,9 @@ export const colors = {
    DarkGrayishViolet: 'hsl(273, 4%, 51%)',
    VeryLightGray: 'hsl(0, 0%, 98%)',
 }
+
+export const navLinks = [
+   'How we work',
+   'Blog',
+   'Account',
+]
