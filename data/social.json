@@ -2,23 +2,23 @@
    "icons": [
       {
          "id": 1,
-         "src": "/icon-facebook.svg",
-         "alt": "Logo de Facebook"
+         "urlImage": "/icon-facebook.svg",
+         "title": "Logo de Facebook"
       },
       {
          "id": 2,
-         "src": "/icon-twitter.svg",
-         "alt": "Logo de Twitter"
+         "urlImage": "/icon-twitter.svg",
+         "title": "Logo de Twitter"
       },
       {
          "id": 3,
-         "src": "/icon-instagram.svg",
-         "alt": "Logo de Instagram"
+         "urlImage": "/icon-instagram.svg",
+         "title": "Logo de Instagram"
       },
       {
          "id": 4,
-         "src": "/icon-pinterest.svg",
-         "alt": "Logo de Pinterest"
+         "urlImage": "/icon-pinterest.svg",
+         "title": "Logo de Pinterest"
       }
    ]
 }
