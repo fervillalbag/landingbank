@@ -1,73 +1,17 @@
 
-.navigation {
+.link-plans {
+   border: 2px solid $VeryLightGray;
+   padding: 1.25rem 8rem;
 
-   &-menu {
-            
-      &:before {
-         content: '';
-         display: block;
-         position: absolute;
-         width: 100%;
-         height: 100%;
-         background-image: url('/bg-pattern-mobile-nav.svg');
-         background-position: bottom center;
-         background-size: contain;
-         background-repeat: no-repeat;
-       
-         @include responsive(768px) {
-            display: none;
-         }
-      }
+   @include responsive(768px) {
+      padding: 0.7rem 2rem;
+      border: 2px solid $DarkViolet;
+      color: $DarkViolet;
+      transition: all 400ms ease !important;
 
-      
-
-      &__item {
-         margin-bottom: 3rem;
-
-         @include responsive(768px) {
-            margin-bottom: 0;
-            margin-right: 2rem;
-
-            &:last-of-type {
-               margin-right: 0;
-            }
-         }
-      }
-
-      &__link {
-         color: $VeryLightGray;
-         font-size: 2rem;
-         text-transform: uppercase;
-
-         @include responsive(768px) {
-            color: $DarkViolet;
-            display: block;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: $DarkGrayishViolet;
-            transition: color 300ms ease;
-
-            &:hover {
-               color: $DarkViolet;
-            }
-         }
-
-         &--plans {
-            border: 2px solid $VeryLightGray;
-            padding: 1.25rem 8rem;
-
-            @include responsive(768px) {
-               padding: 0.7rem 2rem;
-               border: 2px solid $DarkViolet;
-               color: $DarkViolet;
-               transition: all 400ms ease;
-
-               &:hover {
-                  background-color: $DarkViolet;
-                  color: $VeryLightGray;
-               }
-            }
-         }
+      &:hover {
+         background-color: $DarkViolet;
+         color: $VeryLightGray !important;
       }
    }
 }

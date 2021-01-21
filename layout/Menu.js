@@ -23,6 +23,22 @@ const MenuContainer = styled.ul`
       transform: translateY(0);
    }
 
+   &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: url('/bg-pattern-mobile-nav.svg');
+      background-position: bottom center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      
+      @media screen and (min-width: 768px) {
+         display: none;
+      }
+   }
+
    @media screen and (min-width: 768px) {
       position: initial;
       transform: translateY(0);
@@ -35,37 +51,93 @@ const MenuContainer = styled.ul`
    }
 `
 
+const NavItem = styled.li`
+   margin-bottom: 3rem;
+
+   @media screen and (min-width: 768px) {
+      margin-bottom: 0;
+      margin-right: 2rem;
+
+      &:last-of-type {
+         margin-right: 0;
+      }
+   }
+`
+
+const NavLink = styled.a`
+   color: $VeryLightGray;
+   font-size: 2rem;
+   text-transform: uppercase;
+   cursor: pointer;
+
+   @media screen and (min-width: 768px) {
+      color: ${colors.DarkViolet};
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $DarkGrayishViolet;
+      transition: color 300ms ease;
+
+      &:hover {
+         color: ${colors.DarkGrayishViolet};
+      }
+   }
+`
+
+const NavLinkPlans = styled.a`
+   border: 2px solid ${colors.VeryLightGray};
+   padding: 1.25rem 8rem;
+
+   @media screen and (min-width: 768px) {
+      padding: 0.7rem 2rem;
+      border: 2px solid ${colors.DarkViolet};
+      color: ${colors.DarkViolet};
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-weight: 700;
+      transition: all 400ms ease;
+
+      &:hover {
+         background-color: ${colors.DarkViolet};
+         color: ${colors.VeryLightGray};
+      }
+   }
+`
+
 export default function Menu({ barActive }) {
    return (
-      <MenuContainer className={!barActive && 'navigation-menu active'}>
-         <li className="navigation-menu__item">
+      <MenuContainer
+         className={!barActive && 'navigation-menu active'}
+      >
+         <NavItem>
             <Link href="/">
-               <a className="navigation-menu__link">
+               <NavLink>
                   How we work
-               </a>
+               </NavLink>
             </Link>
-         </li>
-         <li className="navigation-menu__item">
+         </NavItem>
+         <NavItem>
             <Link href="/">
-               <a className="navigation-menu__link">
+               <NavLink>
                   Blog
-               </a>
+               </NavLink>
             </Link>
-         </li>
-         <li className="navigation-menu__item">
+         </NavItem>
+         <NavItem>
             <Link href="/">
-               <a className="navigation-menu__link">
+               <NavLink>
                   Account
-               </a>
+               </NavLink>
             </Link>
-         </li>
-         <li className="navigation-menu__item">
+         </NavItem>
+         <NavItem>
             <Link href="/">
-               <a className="navigation-menu__link navigation-menu__link--plans">
+               <NavLinkPlans>
                   View plans
-               </a>
+               </NavLinkPlans>
             </Link>
-         </li>
+         </NavItem>
       </MenuContainer>
    )
 }
