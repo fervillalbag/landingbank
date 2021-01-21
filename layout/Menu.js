@@ -68,12 +68,15 @@ export const NavItem = styled.li`
 const NavLinkPlans = styled.a`
    border: 2px solid ${colors.VeryLightGray};
    padding: 1.25rem 8rem;
+   font-size: 1.8rem;
+   color: ${colors.VeryLightGray};
+   display: block;
 
    @media screen and (min-width: 768px) {
       padding: 0.7rem 2rem;
       border: 2px solid ${colors.DarkViolet};
+      font-size: 1.4rem;
       color: ${colors.DarkViolet};
-      font-size: 1.3rem;
       text-transform: uppercase;
       cursor: pointer;
       font-weight: 700;
@@ -89,7 +92,7 @@ const NavLinkPlans = styled.a`
 export default function Menu({ barActive }) {
    return (
       <MenuContainer
-         className={!barActive && 'navigation-menu active'}
+         className={!barActive && 'active'}
       >
          {navLinks.map(navLink => (
             <NavItemList key={navLink} navLink={navLink} />

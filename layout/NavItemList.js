@@ -5,7 +5,7 @@ import { colors } from '../utils/variables'
 import { NavItem } from './Menu'
 
 const NavLink = styled.a`
-   color: $VeryLightGray;
+   color: ${colors.VeryLightGray};
    font-size: 2rem;
    text-transform: uppercase;
    cursor: pointer;
@@ -15,7 +15,6 @@ const NavLink = styled.a`
       display: block;
       font-size: 1.5rem;
       font-weight: 700;
-      color: $DarkGrayishViolet;
       transition: color 300ms ease;
 
       &:hover {
