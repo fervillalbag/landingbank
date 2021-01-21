@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import styled from '@emotion/styled'
 import { colors } from '../utils/variables'
-import { ButtonLink } from '../components/Button'
+import { ButtonLink } from './Button'
 
 const InfoWrapper = styled.div`
    text-align: center;
